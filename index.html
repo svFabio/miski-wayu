@@ -12,12 +12,15 @@
         <p>La dulce tradición de mango en cada frasco.</p>
     </header>
     <nav>
-        <a href="#producto">Producto</a>
-        <a href="#historia">Nuestra Historia</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contabilidad">Contabilidad</a>
-        <a href="#mapa">Ubicación</a>
-        <a href="#contacto">Contacto</a>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <div class="nav-links" id="nav-links">
+            <a href="#producto">Producto</a>
+            <a href="#historia">Nuestra Historia</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contabilidad">Contabilidad</a>
+            <a href="#mapa">Ubicación</a>
+            <a href="#contacto">Contacto</a>
+        </div>
     </nav>
 
     <section id="producto" class="product">
@@ -38,9 +41,6 @@
             <img src="imagenes/VistaDelantera_FfManzana.jpg" alt="Mermelada en frasco" class="active">
             <img src="imagenes/varios_FfManzana.jpg" alt="Proceso de elaboración">
             <img src="imagenes/Refrigerados_FfManzana.jpg" alt="Proceso de elaboración">
-            <img src="imagenes/Refrigerados_FfManzana.jpg" alt="Proceso de elaboración">
-            <img src="imagenes/Refrigerados_FfManzana.jpg" alt="Proceso de elaboración">
-            <img src="imagenes/Refrigerados_FfManzana.jpg" alt="Proceso de elaboración">
             <button class="right">&#8250;</button>
         </div>
     </section>
@@ -54,8 +54,14 @@
     <section id="mapa" class="mapa">
         <h2>Ubicación</h2>
         <p>Visítanos en</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3806.5446664818023!2d-66.14797!3d-17.433625999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI2JzAxLjEiUyA2NsKwMDgnNTIuNyJX!5e0!3m2!1ses!2sbo!4v1737834027064!5m2!1ses!2sbo" width="600" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3806.5446664818023!2d-66.14797!3d-17.433625999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI2JzAxLjEiUyA2NsKwMDgnNTIuNyJX!5e0!3m2!1ses!2sbo!4v1737834027064!5m2!1ses!2sbo" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </section>
+    
 
     <section id="contacto" class="formulario">
         <p>O comunícate con nosotros directamente:</p>
@@ -64,17 +70,20 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Miski Wayu. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Miski Wayu</p>
         <p>
             Síguenos en:
-            <a href="https://instagram.com" target="_blank">Instagram</a> |
-            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@dulce.fruta.bol?_t=ZM-8tJfLUm5YNJ&_r=1" target="_blank">TikTok</a> |
+            <a href="https://www.facebook.com/profile.php?id=61572533425548&rdid=JHodbJ2P8Aco1ZdM&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15iJiopZ91%2F" target="_blank">Facebook</a>
         </p>
     </footer>
     <script>
         const images = document.querySelectorAll('.carousel img');
         const leftButton = document.querySelector('.carousel .left');
         const rightButton = document.querySelector('.carousel .right');
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
         let currentIndex = 0;
 
         function updateCarousel() {
@@ -91,6 +100,10 @@
         rightButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % images.length;
             updateCarousel();
+        });
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
 
         updateCarousel();
