@@ -213,3 +213,39 @@ footer a:hover {
         font-size: 0.8rem;
     }
 }
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-button img {
+    width: 100%;
+}
+
+footer {
+    background: url('imagenes/bannerLeonard.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.whatsapp-button:hover {
+    background-color: #1ebe57;
+    transform: scale(1.1);
+}
