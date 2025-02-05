@@ -226,7 +226,7 @@ footer {
     margin-top: 20px;
     position: relative;
     bottom: 0;
-    font-size: large;
+    font-size: medium;
     text-shadow: 2px 2px #000000;
 }
 
@@ -284,8 +284,8 @@ footer {
   
   /* Estilos para los íconos */
   .favicon {
-    width: 35px; /* Ajusta el tamaño del ícono */
-    height: 35px;
+    width: 17px; /* Ajusta el tamaño del ícono */
+    height: 17px;
     vertical-align: middle;
   }
   
@@ -306,7 +306,7 @@ footer {
 }
 
 footer {
-    font-size: x-large;
+    font-size: medium;
     background: url('imagenes/azul.png') center/cover no-repeat;
     color: white;
     text-align: left;
