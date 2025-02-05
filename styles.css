@@ -11,7 +11,6 @@ body {
     padding: 0;
     color: #000000;
     background: linear-gradient(to bottom, #283352, #8fa2d6);
-   
     margin: 0;
 }
 
@@ -45,7 +44,7 @@ header h1 {
 }
 
 nav {
-    background: url('imagenes/azul.png') center/cover no-repeat;
+    background-color:#000000;
     padding: 10px;
     text-align: center;
     position: sticky;
@@ -219,7 +218,7 @@ section {
 
 
 footer {
-    background: url('imagenes/Banner3.png') center/cover no-repeat;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 10px;
@@ -282,6 +281,12 @@ footer {
     text-decoration: underline;
   }
   
+
+
+
+
+
+  
   /* Estilos para los íconos */
   .favicon {
     width: 17px; /* Ajusta el tamaño del ícono */
@@ -306,8 +311,8 @@ footer {
 }
 
 footer {
-    font-size: medium;
-    background: url('imagenes/azul.png') center/cover no-repeat;
+    font-size: small;
+    background-color: #000000;
     color: white;
     text-align: left;
     padding: 10px;
